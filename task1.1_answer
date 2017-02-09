@@ -84,3 +84,49 @@ tiedwald@tiedwald-desktop ~/madskills/first $ git status
 	новый файл:    .gitignore
 	новый файл:    task1.1_answer
 
+tiedwald@tiedwald-desktop ~/madskills/first $ git commit
+[master a695a49] First-commit
+ 2 files changed, 88 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 task1.1_answer
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка опережает «origin/master» на 1 коммит.
+  (используйте «git push», чтобы опубликовать ваши локальные коммиты)
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+tiedwald@tiedwald-desktop ~/madskills/first $ git push -u origin master
+Username for 'https://github.com': timoshkin
+Password for 'https://timoshkin@github.com': 
+Подсчет объектов: 4, готово.
+Delta compression using up to 3 threads.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (4/4), 1.18 KiB | 0 bytes/s, готово.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/timoshkin/central.git
+   a17fc4c..a695a49  master -> master
+Ветка master отслеживает внешнюю ветку master из origin.
+
+============================================================================
+ 6.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/first $ cd /home/tiedwald/madskills
+tiedwald@tiedwald-desktop ~/madskills $ git clone https://github.com/timoshkin/central.git second
+Клонирование в «second»…
+remote: Counting objects: 7, done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Распаковка объектов: 100% (7/7), готово.
+Проверка соединения… готово.
+============================================================================
+ 8.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/first $ rm /home/tiedwald/madskills/first/fileB
+
