@@ -321,5 +321,73 @@ tiedwald@tiedwald-desktop ~/madskills/second $ git branch -a
   remotes/origin/feature1
   remotes/origin/master
 tiedwald@tiedwald-desktop ~/madskills/second $ 
+============================================================================
+ 16.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/first $ git merge feature2
+Обновление fe3bfa0..4d69999
+Fast-forward
+ task1.1_answer | 24 ++++++++++++++++++++++++
+ 1 file changed, 24 insertions(+)
+tiedwald@tiedwald-desktop ~/madskills/first $ git log --graph
+* commit 4d6999934f143f4343aa6e40334e7b158bb3d69c
+| Author: Тимошкин Владимир <timoshkin@reg.ru>
+| Date:   Thu Feb 9 07:05:46 2017 +0400
+| 
+|     feature2 - step 15
+|  
+* commit fe3bfa07c2d11fc223ef9b9bfe7af9256902c376
+| Author: Тимошкин Владимир <timoshkin@reg.ru>
+| Date:   Thu Feb 9 06:15:58 2017 +0400
+| 
+|     step 11 - odinakovoe sostoyanie
+|  
+* commit b7999fdc8de636cfe5f720e2437a939eed1d3ed8
+| Author: Тимошкин Владимир <timoshkin@reg.ru>
+| Date:   Thu Feb 9 06:01:03 2017 +0400
+| 
+|     fileB resurrection
+|  
+* commit b5ce556b55f9cc48c5fd75f827ad3658b32bf6d7
+| Author: Тимошкин Владимир <timoshkin@reg.ru>
+| Date:   Thu Feb 9 05:35:31 2017 +0400
+| 
+|     add fileA
+|  
+* commit a695a492bf9ef52073776c94723e4e85796a751c
+| Author: Тимошкин Владимир <timoshkin@reg.ru>
+| Date:   Thu Feb 9 04:47:10 2017 +0400
+| 
+|     First-commit
+|  
+* commit a17fc4c5f46957fe63aaf439dfa0b185bf5161c1
+  Author: timoshkin <timoshkin@reg.ru>
+  Date:   Wed Feb 8 02:42:27 2017 +0400
+  
+      Initial commit
+tiedwald@tiedwald-desktop ~/madskills/first $ git branch -d feature1
+error: Ветка «feature1» не слита полностью.
+Если вы уверены, что хотите ее удалить, запустите «git branch -D feature1».
+tiedwald@tiedwald-desktop ~/madskills/first $ git branch -D feature1
+Ветка feature1 удалена (была 7bd2b72).
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка и «origin/master» разошлись
+и теперь имеют 1 и 1 разный коммит в каждой соответственно.
+  (используйте «git pull», чтобы слить внешнюю ветку в вашу)
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+tiedwald@tiedwald-desktop ~/madskills/first $ git add task1.1_answer 
+
+tiedwald@tiedwald-desktop ~/madskills/first $ git tag v1.0
+tiedwald@tiedwald-desktop ~/madskills/first $ git tag
+v1.0
 
 
