@@ -297,7 +297,31 @@ Author: timoshkin <timoshkin@reg.ru>
 Date:   Wed Feb 8 02:42:27 2017 +0400
 
     Initial commit
+============================================================================
+ 12.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/first $ git branch feature1
+tiedwald@tiedwald-desktop ~/madskills/first $ git branch
+  feature1
+* master
+tiedwald@tiedwald-desktop ~/madskills/first $ git checkout feature1
+M	fileB
+M	task1.1_answer
+Переключено на ветку «feature1»
+tiedwald@tiedwald-desktop ~/madskills/first $ git branch
+* feature1
+  master
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке feature1
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
 
+	изменено:      fileB
+	изменено:      task1.1_answer
+
+<<<<<<< HEAD
 ============================================================================
  15.
 ============================================================================
@@ -390,4 +414,17 @@ tiedwald@tiedwald-desktop ~/madskills/first $ git tag v1.0
 tiedwald@tiedwald-desktop ~/madskills/first $ git tag
 v1.0
 
+=======
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+tiedwald@tiedwald-desktop ~/madskills/first $ git add fileB
+tiedwald@tiedwald-desktop ~/madskills/first $ git add task1.1_answer
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке feature1
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	изменено:      fileB
+	изменено:      task1.1_answer
+>>>>>>> f8e72be56e95bcacce986a9e08b913d6496d3b00
 
