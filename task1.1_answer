@@ -126,9 +126,141 @@ remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
 Распаковка объектов: 100% (7/7), готово.
 Проверка соединения… готово.
 ============================================================================
+ 7.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills $ cd /home/tiedwald/madskills/second
+
+tiedwald@tiedwald-desktop ~/madskills/second $ echo "fileA" > fileA
+
+tiedwald@tiedwald-desktop ~/madskills/second $ echo "fileB" > fileB
+
+tiedwald@tiedwald-desktop ~/madskills/second $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	fileA
+	fileB
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+
+tiedwald@tiedwald-desktop ~/madskills/second $ cp fileA /home/tiedwald/madskills/first
+tiedwald@tiedwald-desktop ~/madskills/second $ cp fileB /home/tiedwald/madskills/first
+tiedwald@tiedwald-desktop ~/madskills/second $ cd /home/tiedwald/madskills/first 
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	fileA
+	fileB
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+
+============================================================================
  8.
 ============================================================================
 tiedwald@tiedwald-desktop ~/madskills/first $ rm /home/tiedwald/madskills/first/fileB
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	fileA
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+Неотслеживаемые файлы:
+  (используйте «git add <файл>…», чтобы добавить в то, что будет включено в коммит)
+
+	fileA
+
+нет изменений добавленных для коммита
+(используйте «git add» и/или «git commit -a»)
+tiedwald@tiedwald-desktop ~/madskills/first $ git add fileA
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	новый файл:    fileA
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add <файл>…», чтобы добавить файл в индекс)
+  (используйте «git checkout -- <файл>…», чтобы отменить изменения
+   в рабочем каталоге)
+
+	изменено:      task1.1_answer
+
+tiedwald@tiedwald-desktop ~/madskills/first $ git add task1.1_answer
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка обновлена в соответствии с «origin/master».
+Изменения, которые будут включены в коммит:
+  (используйте «git reset HEAD <файл>…», чтобы убрать из индекса)
+
+	новый файл:    fileA
+	изменено:      task1.1_answer
+
+tiedwald@tiedwald-desktop ~/madskills/first $ git commit
+[master b5ce556] add fileA
+ 2 files changed, 48 insertions(+)
+ create mode 100644 fileA
+tiedwald@tiedwald-desktop ~/madskills/first $ git status
+На ветке master
+Ваша ветка опережает «origin/master» на 1 коммит.
+  (используйте «git push», чтобы опубликовать ваши локальные коммиты)
+нечего коммитить, нет изменений в рабочем каталоге
+tiedwald@tiedwald-desktop ~/madskills/first $ git push -u origin master
+Username for 'https://github.com': timoshkin
+Password for 'https://timoshkin@github.com': 
+Подсчет объектов: 4, готово.
+Delta compression using up to 3 threads.
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (4/4), 1.18 KiB | 0 bytes/s, готово.
+Total 4 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
+To https://github.com/timoshkin/central.git
+   a695a49..b5ce556  master -> master
+Ветка master отслеживает внешнюю ветку master из origin.
+tiedwald@tiedwald-desktop ~/madskills/first $ cd /home/tiedwald/madskills/secondtiedwald@tiedwald-desktop ~/madskills/second $ 
 ============================================================================
  9.
 ============================================================================
