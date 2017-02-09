@@ -298,4 +298,28 @@ Date:   Wed Feb 8 02:42:27 2017 +0400
 
     Initial commit
 
+============================================================================
+ 15.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/second $ git push -u origin masterUsername for 'https://github.com': timoshkin
+Password for 'https://timoshkin@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/timoshkin/central.git
+   fe3bfa0..f8e72be  master -> master
+Ветка master отслеживает внешнюю ветку master из origin.
+tiedwald@tiedwald-desktop ~/madskills/second $ git checkout feature2
+Переключено на ветку «feature2»
+tiedwald@tiedwald-desktop ~/madskills/second $ git branch
+  feature1
+* feature2
+  master
+tiedwald@tiedwald-desktop ~/madskills/second $ git branch -a
+  feature1
+* feature2
+  master
+  remotes/origin/HEAD -> origin/master
+  remotes/origin/feature1
+  remotes/origin/master
+tiedwald@tiedwald-desktop ~/madskills/second $ 
+
 
