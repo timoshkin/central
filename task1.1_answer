@@ -129,4 +129,41 @@ remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
  8.
 ============================================================================
 tiedwald@tiedwald-desktop ~/madskills/first $ rm /home/tiedwald/madskills/first/fileB
+============================================================================
+ 9.
+============================================================================
+tiedwald@tiedwald-desktop ~/madskills/second $ cd /home/tiedwald/madskills/first
+tiedwald@tiedwald-desktop ~/madskills/first $ git log
+commit b5ce556b55f9cc48c5fd75f827ad3658b32bf6d7
+Author: Тимошкин Владимир <timoshkin@reg.ru>
+Date:   Thu Feb 9 05:35:31 2017 +0400
+
+    add fileA
+
+commit a695a492bf9ef52073776c94723e4e85796a751c
+Author: Тимошкин Владимир <timoshkin@reg.ru>
+Date:   Thu Feb 9 04:47:10 2017 +0400
+
+    First-commit
+
+commit a17fc4c5f46957fe63aaf439dfa0b185bf5161c1
+Author: timoshkin <timoshkin@reg.ru>
+Date:   Wed Feb 8 02:42:27 2017 +0400
+
+    Initial commit
+
+tiedwald@tiedwald-desktop ~/madskills/second $ cd /home/tiedwald/madskills/second
+tiedwald@tiedwald-desktop ~/madskills/second $ git log
+commit a695a492bf9ef52073776c94723e4e85796a751c
+Author: Тимошкин Владимир <timoshkin@reg.ru>
+Date:   Thu Feb 9 04:47:10 2017 +0400
+
+    First-commit
+
+commit a17fc4c5f46957fe63aaf439dfa0b185bf5161c1
+Author: timoshkin <timoshkin@reg.ru>
+Date:   Wed Feb 8 02:42:27 2017 +0400
+
+    Initial commit
+
 
